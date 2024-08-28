@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'clientes/css/clientes.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+        }
+        .jumbotron {
+            background-color: #333; /* Cor de fundo mais clara para a jumbotron */
+            color: #fff; /* Texto branco dentro da jumbotron */
+            border-radius: 0.3rem; /* Borda arredondada */
+        }
+        .card {
+            background-color: #444; /* Fundo do cartão */
+            border: none; /* Remove a borda padrão do cartão */
+        }
+        .card-body {
+            color: #fff; /* Texto branco dentro do cartão */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Cor do botão */
+            border: none; /* Remove a borda do botão */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+{% endblock %}
+
+{% block 'dashboard' %}
+<div class="container mt-5">
+    <div class="jumbotron p-5">
+        <h1 class="display-4">Bem-vindo ao Mecajato!</h1>
+        <p class="lead">O Mecajato é a sua escolha ideal para serviços de alta qualidade em manutenção e cuidados com veículos.</p>
+        <hr class="my-4">
+        <p>Aqui estão os principais serviços que oferecemos:</p>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Carwash</h5>
+                        <p class="card-text">Serviço completo de lavagem de veículos, garantindo que seu carro fique limpo e brilhante.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mecânica</h5>
+                        <p class="card-text">Reparos e manutenção de veículos realizados por profissionais qualificados, assegurando o melhor desempenho para o seu carro.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mt-4">Explore nosso site para saber mais sobre os nossos serviços e entre em contato para agendar uma visita.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

@@ -70,3 +70,5 @@ def servico_adicional(request):
     servico.servicos_adicionais.add(servico_adicional)
     servico.save()
     return HttpResponse('salvo')
+
+
