@@ -44,7 +44,7 @@ def clientes(request):
         for carro, placa, ano in zip(carros, placas, anos):
             car = Carro(carro=carro, placa=placa, ano=ano, cliente=cliente)
             car.save()
-        return HttpResponse('teste')
+        return render(request, 'clientes.html')
 def att_cliente(request):
     id_cliente = request.POST.get('id_cliente')
     cliente = Cliente.objects.filter(id=id_cliente)

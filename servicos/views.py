@@ -15,7 +15,8 @@ def novo_servico(request):
         
         if form.is_valid():
             form.save()
-            return HttpResponse('Salvo com sucesso')
+            servicos = Servico.objects.all()
+            return render(request, "listar_servico.html",{'servicos': servicos})
         else:
             return render(request, 'novo_servico.html', {'form': form})
 def listar_servico(request):
